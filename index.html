@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postman.js</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="prism.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" style="color: orange;">Postman.js</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn  my-2 my-sm-0" type="submit" style="background: orange; color: aliceblue;">Search</button>
+          </form>
+        </div>
+      </nav>
+      <h1 style="text-align: center; color: rgb(87, 85, 85);">Postman<span style="color: orange;">.js</span></h1>
+      <div class="container" id="topcon">
+          <div class="row">
+              <div class="col-md-8 col-12 mx-auto" >
+                <div class="form-goup row ">
+                    <label for="inputURL" class="col-sm-2 col-form-label" style="color: orange; font-weight: 600;">URL</label>
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" id="URL" placeholder="Enter URL">
+                        
+                    </div>
+                </div>
+              </div>
+          </div>
+</div>
+<div class="requests">
+    <h4>Select type of method</h4>
+    <div>
+      <input  type="radio" name="requestType" id="GET" value="GET" checked>
+      <label  for="GET">
+        GET
+      </label>
+    </div>
+    <div >
+      <input   type="radio" name="requestType" id="POST" value="POST">
+      <label for="POST">
+         POST
+      </label>
+    </div>
+    <div >
+      <input   type="radio" name="requestType" id="PUT" value="PUT" >
+      <label  for="PUT">
+        PUT
+      </label>
+    </div>
+    <div >
+      <input   type="radio" name="requestType" id="DELETE" value="DELETE" >
+      <label  for="PUT">
+        DELETE
+      </label>
+    </div>
+  </div>
+  
+  <div class="content">
+     <h4>Select Conntent Type</h4> 
+      <div>
+    <input  type="radio" name="contentType" id="JSON" value="JSON" checked>
+    <label  for="JSON">
+      JSON
+    </label>
+  </div>
+  <div >
+    <input   type="radio" name="contentType" id="params" value="params">
+    <label for="params">
+       CUSTOM
+    </label>
+  </div>
+  </div>
+
+  <div id="json-box">
+    <div class="form-group" >
+        <label for="json-box">Enter JSON here</label>
+        <textarea class="form-control"  rows="3" id="jsontext"></textarea>
+      </div>
+</div>
+
+
+<div id="parameter-box">
+        <div >
+          <input type="text"  placeholder="Enter paramet 1 key" class="parameterKey">
+        </div>
+        <div >
+          <input type="text" placeholder="Enter parameter 1 value" class="parameterValue">
+        </div>
+      <button class="btn " style="background-color: orange;" id="plusBtn">+</button>
+    <div id="parmsbox"></div>
+</div>
+
+<button class="btn  my-2 " type="submit" style="background:rgb(49, 49, 228); color: aliceblue;" id="submit">Send</button>
+  <div id="response-box">
+      <div class="form-group">
+          <label for="json-box">Yor Response</label>
+          <!-- <textarea class="form-control" id="responseText" rows="3"  >your response</textarea> -->
+          <pre class="language-javascript" id="textarea">
+            <code class="language-javascript" id="responsePrism">
+
+            </code>
+          </pre>
+        </div>
+</div>
+<div class="copy" style="text-align: center; color: gray;">
+  <p >&copy; Copyrights reserved @ <span style="color: orange;">postman.js</span>2020</p>
+  <p>Web appliction developed by jaydeep shelake</p>
+</div>
+
+
+<script src="new.js"></script>
+<script src="prism.js"></script>
+</body>
+</html>
